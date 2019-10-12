@@ -195,7 +195,7 @@ public class Sistema{
                 //rb.put(av.getNome(), av);
 
             } catch (Exception e) {
-                
+                e.printStackTrace();
             }
 }
 
