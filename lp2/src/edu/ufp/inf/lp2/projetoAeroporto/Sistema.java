@@ -200,10 +200,10 @@ public class Sistema{
 }
 
 
+         
 
-
-         System.out.println(gr.searchAviao("Eusebio manel  2"));
-          System.out.println(gr.searchAeroporto("OPO"));
+         System.out.println(gr.searchAviao("Eusebio manel"));
+          System.out.println(gr.searchAeroporto("OPO 2"));
            System.out.println(gr.aviaoNoAeroporto("OPO"));
 
     }
