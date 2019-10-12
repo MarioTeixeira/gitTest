@@ -89,11 +89,6 @@ public class Sistema{
 
      public Vector <Aviao> aviaoNoAeroporto(String sigla){
            Vector <Aviao> vav=new Vector();
-            
-         
-
-
-
 
            Iterator<String> itr = this.avioes.keys().iterator();
             while (itr.hasNext()) {
@@ -108,9 +103,7 @@ public class Sistema{
 
 
                 
-       
-            
-     
+
     public void remAeroporto(String sigla) {
         this.aeroportos.delete(sigla);
     }
@@ -201,11 +194,11 @@ public class Sistema{
 
      
          
-         
-         System.out.println(gr.searchAviao("Eusebio"));
-          System.out.println(gr.searchAeroporto("OPO"));
-           System.out.println(gr.aviaoNoAeroporto("OPO"));
-      
+//
+//         System.out.println(gr.searchAviao("Eusebio"));
+//          System.out.println(gr.searchAeroporto("OPO"));
+//           System.out.println(gr.aviaoNoAeroporto("OPO"));
+//      
     }
 
     /**
