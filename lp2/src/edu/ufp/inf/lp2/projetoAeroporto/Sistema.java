@@ -28,11 +28,11 @@ public class Sistema{
     private int idVoos;
 
     private int codAviao;
-    
+
     private int idAeroporto;
-    
-   
-    
+
+
+
 
     public void addAviao(Aviao a) throws AviaoJaRegistado {
          if (this.avioes.get(a.getNome())==a){
@@ -42,14 +42,14 @@ public class Sistema{
         }
          codAviao++;
     }
-    
+
     public Aviao searchAviao(String nome) throws AviaoNaoExistente {
-        if (avioes.contains(nome)) {           
+        if (avioes.contains(nome)) {
             return this.avioes.get(nome);
         } else {
             throw new AviaoNaoExistente("Aviao não existe");
-        }   
-            
+        }
+
     }
 
     public void remAviao(String nome) {
@@ -68,7 +68,7 @@ public class Sistema{
         return null;
     }
 
-   
+
 
     public void addAeroporto(Aeroporto a) throws AeroportoJaRegistado {
         if (this.aeroportos.get(a.getSigla())==a){
@@ -76,11 +76,11 @@ public class Sistema{
         }else{
             aeroportos.put(a.getSigla(), a);
         }
-        idAeroporto++;       
+        idAeroporto++;
     }
-    
+
      public Aeroporto searchAeroporto(String sigla) throws AeroportoNaoExistente {
-              if (aeroportos.contains(sigla)) { 
+              if (aeroportos.contains(sigla)) {
             return this.aeroportos.get(sigla);
         } else {
             throw new AeroportoNaoExistente("Aeroporto não existe");
@@ -89,17 +89,17 @@ public class Sistema{
 
      public Vector <Aviao> aviaoNoAeroporto(String sigla){
            Vector <Aviao> vav=new Vector();
-            
-         
+
+
 
 
 
 
            Iterator<String> itr = this.avioes.keys().iterator();
             while (itr.hasNext()) {
-                 String ph = itr.next(); 
+                 String ph = itr.next();
                if(this.avioes.get(ph).getCod_aeroporto().compareTo("LGW")==0){
-                   Aviao av=this.avioes.get(ph);    
+                   Aviao av=this.avioes.get(ph);
                 vav.add(av);
                }
             }
@@ -107,10 +107,10 @@ public class Sistema{
      }
 
 
-                
-       
-            
-     
+
+
+
+
     public void remAeroporto(String sigla) {
         this.aeroportos.delete(sigla);
     }
@@ -119,18 +119,18 @@ public class Sistema{
         this.voos.delete(d);
     }
 
- 
-    
+
+
     public ArrayList<Voo> procurarVoosEntreDatas(Date d1, Date d2) {
         return null;
     }
-    
-    
+
+
 
     public static void main(String args[]) throws  AeroportoNaoExistente, FileNotFoundException, AviaoNaoExistente, AviaoJaRegistado, VooJaRegistado {
         Aeroporto ae;
         Aviao av;
-        
+
         Aviao av1=new Aviao(34, "novo", "falcao", "qualquer", 2000,10000, 20000, "OPO", 100, 10000);
         Sistema gr=new Sistema();
         Scanner sAeroporto = new Scanner(new FileReader("/home/mario/LP1617/airPorts.txt"));
@@ -199,13 +199,13 @@ public class Sistema{
             }
 }
 
-     
-         
-         
+
+
+
          System.out.println(gr.searchAviao("Eusebio"));
           System.out.println(gr.searchAeroporto("OPO"));
            System.out.println(gr.aviaoNoAeroporto("OPO"));
-      
+
     }
 
     /**
