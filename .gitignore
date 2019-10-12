@@ -1,0 +1,5 @@
+*.class
+*.iml
+lp2/.idea
+lp2/build/
+lp2/applet.policy
